@@ -9,7 +9,8 @@ class LoadingDialog {
       useSafeArea: false,
       context: context,
       barrierDismissible: false,
-      builder: (_) => WillPopScope(
+      builder: (_) => PopScope(
+        canPop: false,
         child: BackdropFilter(
           filter: ImageFilter.blur(
             sigmaX: 4,
@@ -44,9 +45,9 @@ class LoadingDialog {
             ),
           ),
         ),
-        onWillPop: () {
-          return Future.value(false);
-        },
+        // onWillPop: () {
+        //   return Future.value(false);
+        // },
       ),
     );
   }
