@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     if (isScreenLoaded) return;
     isScreenLoaded = true;
     MemoryGameProvider memoryGameProvider = context.read<MemoryGameProvider>();
-    memoryGameProvider.loadCardsToShow(12);
+    memoryGameProvider.loadCardsToShow(2);
     Future.delayed(
       const Duration(seconds: 3),
       () => NavigationServices.replaceTo(screen: const HomeScreen()),
@@ -42,6 +42,14 @@ class _SplashScreenState extends State<SplashScreen> {
             image: AssetImage('assets/images/background.png'),
             fit: BoxFit.fill,
             opacity: 0.1,
+          ),
+        ),
+        child: Text(
+          'Memory Game',
+          style: TextStyle(
+            fontSize: ScreenSize.width * 0.1,
+            fontWeight: FontWeight.bold,
+            color: Colors.deepPurple,
           ),
         ),
       ),

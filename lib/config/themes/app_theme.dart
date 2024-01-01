@@ -4,7 +4,7 @@ class AppTheme {
   ThemeData getTheme() {
     return ThemeData(
       useMaterial3: true,
-      primaryColor: Colors.purpleAccent,
+      primaryColor: Colors.blueAccent,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       brightness: Brightness.light,
     );
